@@ -22,7 +22,6 @@ calle sardi 136, Monte Grande,Buenos Aires
 
 ---
 
-Este sitio está alojado en GitHub Pages:  
-👉 https://herreriavelazquezmann.github.io/herreria/
+
 
 
