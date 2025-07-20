@@ -1,0 +1,19 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Herrería Velázquez Mann",
+  "image": "https://herreriavelazquezmann.github.io/herreria/img/portada.jpg",
+  "@id": "https://herreriavelazquezmann.github.io/herreria/",
+  "url": "https://herreriavelazquezmann.github.io/herreria/",
+  "telephone": "+54 9 11 4028-9266",
+  "address": {
+    "@type": "PostalAddress",  
+    "addressLocality": "calle sardi 136, Monte Grande,Buenos Aires",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "description": "Rejas antirrobo, portones y estructuras metálicas a medida. Más de 20 años de experiencia en Zona Sur.",
+  "openingHours": "Mo-Sa 09:00-18:00"
+}
+</script>
