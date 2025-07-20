@@ -65,10 +65,10 @@
       padding: 20px 0;
     }
     .carousel img {
-      scroll-snap-align: center;
-      min-width: 300px;
-      max-width: 300px;
-      height: 200px;
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 320px;
+      height: 240px;
       object-fit: cover;
       border-radius: var(--radius);
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -77,6 +77,28 @@
     .carousel img:hover {
       transform: scale(1.03);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .cta {
@@ -129,15 +151,30 @@
   </section>
 
   <section class="section">
-    <h2>Trabajos más solicitados</h2>
-    <p>Conocé algunas de las soluciones que realizamos en nuestra herrería:</p>
-    <ul style="text-align: left; max-width: 700px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
-      <li><strong>Puertas rejas:</strong> Rejas reforzadas para entradas, con cerraduras seguras y diseño estético.</li>
-      <li><strong>Puertas ventana:</strong> Estructuras metálicas que combinan seguridad con entrada de luz.</li>
-      <li><strong>Rejas para ventana:</strong> Protección antirrobo para hogares y comercios, con diseños modernos o clásicos.</li>
-      <li><strong>Gabinetes metálicos:</strong> Ideales para medidores, herramientas o exteriores. Personalizables.</li>
-      <li><strong>Camas de pie flotante:</strong> Estructuras de hierro resistentes para dormitorios modernos o industriales.</li>
-    </ul>
+    <h2>¿Qué podemos fabricar?</h2>
+    <p>Conocé nuestros trabajos destacados, recomendaciones y opciones más solicitadas:</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Puertas rejas</h3>
+        <p>Ideales para entradas seguras. Ofrecemos opciones con refuerzo interno, cerradura multipunto y diseño moderno o clásico.</p>
+      </div>
+      <div class="card">
+        <h3>Puertas ventana</h3>
+        <p>Diseñadas para brindar protección sin oscurecer los ambientes. Gran variedad de formatos y apertura exterior o interior.</p>
+      </div>
+      <div class="card">
+        <h3>Rejas para ventana</h3>
+        <p>Fabricamos modelos clásicos, coloniales y modernos. Las instalamos con anclajes seguros y terminación antioxidante.</p>
+      </div>
+      <div class="card">
+        <h3>Gabinetes metálicos</h3>
+        <p>Soluciones duraderas para proteger medidores, herramientas o depósitos. Se personalizan en tamaño y cerradura.</p>
+      </div>
+      <div class="card">
+        <h3>Camas de pie flotante</h3>
+        <p>Estilo industrial y minimalista. Estructura metálica robusta que da sensación de flotación sin comprometer resistencia.</p>
+      </div>
+    </div>
   </section>
 
   <section class="cta">
@@ -150,3 +187,4 @@
   </footer>
 </body>
 </html>
+
