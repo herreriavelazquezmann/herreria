@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,20 +9,17 @@
   <meta name="description" content="Rejas de seguridad, portones metálicos y herrería a medida en Zona Sur. Herrería Velázquez Mann: más de 20 años de experiencia en hierro. Presupuestos por WhatsApp.">
   <meta name="robots" content="index, follow">
 
-  <!-- SEO social -->
   <meta property="og:title" content="Herrería Velázquez Mann" />
   <meta property="og:description" content="Especialistas en rejas antirrobo, portones y trabajos en hierro a medida. Atención en Zona Sur y alrededores." />
   <meta property="og:image" content="img/portada.png" />
   <meta property="og:url" content="https://herreriavelazquezmann.github.io/herreria/" />
   <meta property="og:type" content="website" />
 
-  <!-- PWA y Favicon -->
   <meta name="theme-color" content="#111111">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-  <!-- Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -57,21 +56,40 @@
       line-height: 1.7;
     }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+    .carrusel-container {
+      overflow: hidden;
+      white-space: nowrap;
     }
-    .galeria img {
-      width: 100%;
+    .carrusel {
+      display: inline-block;
+      animation: scroll 40s linear infinite;
+    }
+    .carrusel img {
+      width: 300px;
+      height: auto;
       border-radius: var(--radius);
+      margin: 10px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: zoom-in;
     }
-    .galeria img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .trabajos-section {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .trabajos-section ul {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .trabajos-section li {
+      margin-bottom: 15px;
     }
 
     .cta {
@@ -104,7 +122,6 @@
     }
   </style>
 
-  <!-- Schema JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -133,16 +150,29 @@
   </header>
 
   <section class="section">
-    <h2>Soluciones en Hierro a Medida</h2>
-    <p>Con más de 20 años de experiencia, fabricamos <strong>rejas antirrobo</strong>, portones metálicos, barandas, estructuras de seguridad y todo tipo de trabajos en hierro. Atendemos en Lanús, Banfield, Lomas de Zamora, Avellaneda y alrededores.</p>
-    <div class="galeria">
-      <img src="img/trabajo1.png" alt="Reja antirrobo con diseño moderno y líneas verticales">
-      <img src="img/trabajo2.png" alt="Portón metálico a medida con terminación automatizada">
-      <img src="img/trabajo3.png" alt="Jaula metálica de protección para medidor de gas o electricidad">
-      <img src="img/trabajo4.png" alt="Cerramiento reforzado para mascotas o jardín">
-      <img src="img/trabajo5.png" alt="Armario metálico con cerradura de seguridad para exteriores">
-      <img src="img/trabajo6.png" alt="Puerta de seguridad metálica con cerradura multipunto">
+    <h2>Proyectos Realizados</h2>
+    <div class="carrusel-container">
+      <div class="carrusel">
+        <img src="img/trabajo1.png" alt="Reja moderna">
+        <img src="img/trabajo2.png" alt="Portón automatizado">
+        <img src="img/trabajo3.png" alt="Jaula para medidor">
+        <img src="img/trabajo4.png" alt="Cerramiento reforzado">
+        <img src="img/trabajo5.png" alt="Armario metálico">
+        <img src="img/trabajo6.png" alt="Puerta de seguridad">
+      </div>
     </div>
+  </section>
+
+  <section class="trabajos-section">
+    <h2>¿Qué podemos fabricar para vos?</h2>
+    <ul>
+      <li>Rejas de seguridad fijas y móviles</li>
+      <li>Portones corredizos, levadizos y automatizados</li>
+      <li>Estructuras metálicas a medida para viviendas y galpones</li>
+      <li>Cerramientos para patios, balcones o espacios de mascotas</li>
+      <li>Jaulas para medidores y protecciones técnicas</li>
+      <li>Barandas, pasamanos y portones de diseño personalizado</li>
+    </ul>
   </section>
 
   <section class="cta">
@@ -155,5 +185,3 @@
   </footer>
 </body>
 </html>
-
-
