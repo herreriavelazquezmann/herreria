@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,17 +7,20 @@
   <meta name="description" content="Rejas de seguridad, portones metálicos y herrería a medida en Zona Sur. Herrería Velázquez Mann: más de 20 años de experiencia en hierro. Presupuestos por WhatsApp.">
   <meta name="robots" content="index, follow">
 
+  <!-- SEO social -->
   <meta property="og:title" content="Herrería Velázquez Mann" />
   <meta property="og:description" content="Especialistas en rejas antirrobo, portones y trabajos en hierro a medida. Atención en Zona Sur y alrededores." />
   <meta property="og:image" content="img/portada.png" />
   <meta property="og:url" content="https://herreriavelazquezmann.github.io/herreria/" />
   <meta property="og:type" content="website" />
 
+  <!-- PWA y Favicon -->
   <meta name="theme-color" content="#111111">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
+  <!-- Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -56,40 +57,26 @@
       line-height: 1.7;
     }
 
-    .carrusel-container {
-      overflow: hidden;
-      white-space: nowrap;
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px 0;
     }
-    .carrusel {
-      display: inline-block;
-      animation: scroll 40s linear infinite;
-    }
-    .carrusel img {
-      width: 300px;
-      height: auto;
+    .carousel img {
+      scroll-snap-align: center;
+      min-width: 300px;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
       border-radius: var(--radius);
-      margin: 10px;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .trabajos-section {
-      background: #fff;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .trabajos-section ul {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-    .trabajos-section li {
-      margin-bottom: 15px;
+    .carousel img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
     }
 
     .cta {
@@ -121,27 +108,6 @@
       padding: 20px;
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Herrería Velázquez Mann",
-    "image": "https://herreriavelazquezmann.github.io/herreria/img/portada.png",
-    "@id": "https://herreriavelazquezmann.github.io/herreria/",
-    "url": "https://herreriavelazquezmann.github.io/herreria/",
-    "telephone": "+54 9 11 4028-9266",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Sardi 136",
-      "addressLocality": "Monte Grande",
-      "addressRegion": "Buenos Aires",
-      "addressCountry": "AR"
-    },
-    "description": "Rejas antirrobo, portones y estructuras metálicas a medida. experiencia en Zona Sur.",
-    "openingHours": "Mo-Sa 09:00-18:00"
-  }
-  </script>
 </head>
 <body>
   <header>
@@ -150,28 +116,27 @@
   </header>
 
   <section class="section">
-    <h2>Proyectos Realizados</h2>
-    <div class="carrusel-container">
-      <div class="carrusel">
-        <img src="img/trabajo1.png" alt="Reja moderna">
-        <img src="img/trabajo2.png" alt="Portón automatizado">
-        <img src="img/trabajo3.png" alt="Jaula para medidor">
-        <img src="img/trabajo4.png" alt="Cerramiento reforzado">
-        <img src="img/trabajo5.png" alt="Armario metálico">
-        <img src="img/trabajo6.png" alt="Puerta de seguridad">
-      </div>
+    <h2>Soluciones en Hierro a Medida</h2>
+    <p>Con más de 20 años de experiencia, fabricamos <strong>rejas antirrobo</strong>, portones metálicos, barandas, estructuras de seguridad y todo tipo de trabajos en hierro. Atendemos en Lanús, Banfield, Lomas de Zamora, Avellaneda y alrededores.</p>
+    <div class="carousel">
+      <img src="img/trabajo1.png" alt="Reja antirrobo">
+      <img src="img/trabajo2.png" alt="Portón metálico">
+      <img src="img/trabajo3.png" alt="Jaula metálica">
+      <img src="img/trabajo4.png" alt="Cerramiento para mascotas">
+      <img src="img/trabajo5.png" alt="Armario metálico">
+      <img src="img/trabajo6.png" alt="Puerta de seguridad">
     </div>
   </section>
 
-  <section class="trabajos-section">
-    <h2>¿Qué podemos fabricar para vos?</h2>
-    <ul>
-      <li>Rejas de seguridad fijas y móviles</li>
-      <li>Portones corredizos, levadizos y automatizados</li>
-      <li>Estructuras metálicas a medida para viviendas y galpones</li>
-      <li>Cerramientos para patios, balcones o espacios de mascotas</li>
-      <li>Jaulas para medidores y protecciones técnicas</li>
-      <li>Barandas, pasamanos y portones de diseño personalizado</li>
+  <section class="section">
+    <h2>Trabajos más solicitados</h2>
+    <p>Conocé algunas de las soluciones que realizamos en nuestra herrería:</p>
+    <ul style="text-align: left; max-width: 700px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;">
+      <li><strong>Puertas rejas:</strong> Rejas reforzadas para entradas, con cerraduras seguras y diseño estético.</li>
+      <li><strong>Puertas ventana:</strong> Estructuras metálicas que combinan seguridad con entrada de luz.</li>
+      <li><strong>Rejas para ventana:</strong> Protección antirrobo para hogares y comercios, con diseños modernos o clásicos.</li>
+      <li><strong>Gabinetes metálicos:</strong> Ideales para medidores, herramientas o exteriores. Personalizables.</li>
+      <li><strong>Camas de pie flotante:</strong> Estructuras de hierro resistentes para dormitorios modernos o industriales.</li>
     </ul>
   </section>
 
