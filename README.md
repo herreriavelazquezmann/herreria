@@ -23,4 +23,4 @@ Pedí tu presupuesto por WhatsApp → [https://wa.me/5491140289266](https://wa.m
 Este sitio está alojado en GitHub Pages:  
 👉 https://herreriavelazquezmann.github.io/herreria/
 
-Diseñado y optimizado para SEO local.
+
