@@ -33,11 +33,32 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
 
+    nav {
+      background: var(--dark);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: var(--dark); color: white; text-align: center;
       padding: 60px 20px 40px;
     }
-    header h1 { font-size: 2.8rem; }
+    header h2 { font-size: 2.8rem; }
     header p { font-size: 1.2rem; margin-top: 10px; color: #ccc; }
 
     .section {
@@ -65,14 +86,8 @@
       padding: 20px 0;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      animation: scroll-carousel 30s linear infinite;
-    }
-    @keyframes scroll-carousel {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
     }
     .carousel::-webkit-scrollbar { display: none; }
-
     .carousel img {
       scroll-snap-align: start;
       flex: 0 0 auto;
@@ -84,7 +99,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .carousel img:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
       cursor: pointer;
     }
@@ -147,14 +162,24 @@
   </style>
 </head>
 <body>
-  <header>
+  <nav>
     <h1>Herrería Velázquez Mann</h1>
-    <p>Especialistas en rejas antirrobo, portones y estructuras de seguridad</p>
+    <div>
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Galería</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/5491140289266" target="_blank">💬 Cotizá aquí</a>
+    </div>
+  </nav>
+
+  <header>
+    <h2>Especialistas en rejas antirrobo, portones y estructuras de seguridad</h2>
+    <p>Más de 20 años fabricando confianza en hierro</p>
   </header>
 
-  <section class="section">
+  <section class="section" id="trabajos">
     <h2>Soluciones en Hierro a Medida</h2>
-    <p>Con más de 20 años de experiencia, fabricamos <strong>rejas antirrobo</strong>, portones metálicos, barandas, estructuras de seguridad y todo tipo de trabajos en hierro. Atendemos en Lanús, Banfield, Lomas de Zamora, Avellaneda y alrededores.</p>
+    <p>Fabricamos rejas antirrobo, portones metálicos, barandas, estructuras de seguridad y todo tipo de trabajos en hierro. Atendemos en Zona Sur y alrededores.</p>
     <div class="carousel">
       <img src="img/trabajo1.png" alt="Reja antirrobo">
       <img src="img/trabajo2.png" alt="Portón metálico">
@@ -165,7 +190,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="servicios">
     <h2>¿Qué podemos fabricar?</h2>
     <p>Conocé nuestros trabajos destacados, recomendaciones y opciones más solicitadas:</p>
     <div class="card-grid">
@@ -192,7 +217,7 @@
     </div>
   </section>
 
-  <section class="cta">
+  <section class="cta" id="contacto">
     <h2>📲 Pedí tu presupuesto por WhatsApp</h2>
     <a href="https://wa.me/5491140289266" target="_blank">Contactar ahora</a>
   </section>
